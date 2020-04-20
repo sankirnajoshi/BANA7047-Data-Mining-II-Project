@@ -26,7 +26,7 @@ a: The mean distance between a sample and all other points in the same class.
 b: The mean distance between a sample and all other points in the next nearest cluster.
 
 The Silhouette Coefficient s for a single sample is then given as:    
-![]('data/silhoutte_formula.png')
+![](data/silhoutte_formula.png)
 
 The Silhouette Coefficient for a set of samples is given as the mean of the Silhouette Coefficient for each sample.
 
