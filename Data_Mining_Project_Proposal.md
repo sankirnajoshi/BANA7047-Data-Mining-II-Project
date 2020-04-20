@@ -21,25 +21,36 @@ Since unsupervised learning is an end-goal in itself, this project will focus on
 
 ### Evaluation Metrics
 In unsupervised learning, evaluating the performance of the model is generally unanswerable as there is no known _truth_ labels to compare and evaulate our model against. However, depending on the problem at hand, we might already know the number of clusters available in the data. When this is not known, we may not know what structure exists within the data — if any. However, we can quantify the “goodness” of a clustering by calculating each data point’s [silhouette coefficient](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html). A higher Silhouette Coefficient score relates to a model with better defined clusters. The score is bounded between -1 for incorrect clustering and +1 for highly dense clustering. Scores around zero indicate overlapping clusters. Thus, when scores are higher, we can acertain a good cluster as a higher score means dense and well seperated clusters, which relate to the standard definition of cluster.    
-The Silhouette Coefficient is defined for each sample and is composed of two scores:
-a: The mean distance between a sample and all other points in the same class.
+The Silhouette Coefficient is defined for each sample and is composed of two scores:    
+a: The mean distance between a sample and all other points in the same class.    
 b: The mean distance between a sample and all other points in the next nearest cluster.
 
-The Silhouette Coefficient s for a single sample is then given as: $ s = \frac{b - a}{max(a, b)} $
+The Silhouette Coefficient s for a single sample is then given as:    
+<img src="https://bit.ly/2XOcAI6" align="center" border="0" alt="s = \frac{b - a}{max(a, b)}" width="118" height="46" />
 
 The Silhouette Coefficient for a set of samples is given as the mean of the Silhouette Coefficient for each sample.
 
 ### Project Design
+- Programming Requirements
+    - Python 3.6.6
+    - Sklearn 0.22.2
+    - pandas 0.25.3
+    - numpy 1.18.2
+    - matplotlib 3.2.1
+    - seaborn 0.10.0
 
-The following are the key steps involved in the project.
-- Data Exploration
-- Feature Relevance
-- Feature Scaling
-- Outlier Detection
-- Feature Transformation with PCA
-- Clustering
-    - Gaussian Mixture Models
-    - KMeans Clustering
-- Cluster Visualtion with Biplots
-- Data Recovery
-- Conclusions and findings
+- Data
+    - Fifa 20 dataset on Kaggle.
+
+- Project Steps
+    - Data Exploration
+    - Feature Relevance
+    - Feature Scaling
+    - Outlier Detection
+    - Feature Transformation with PCA
+    - Clustering
+        - Gaussian Mixture Models
+        - KMeans Clustering
+    - Cluster Visualtion with Biplots
+    - Data Recovery
+    - Conclusions and findings
